@@ -1,5 +1,5 @@
-=Route 已解决的问题
-1 建立带有参数的url，url：http://localhost:3000/events?order=starts_at 
+=Route 
+1  reuse an existing action for sorting,url：http://localhost:3000/events?order=starts_at 
 
 2 extended the :collection routes and added a new action for searching
   http://localhost:3000/events/search?q=rubyconf
@@ -7,4 +7,4 @@
 3 extended the :member routes and added a new action for copying,
  http://localhost:3000/events/3/copy
 
-4 建立简单的本机客户端程序，维护后台数据。
+4 Buiding a simple remote client program, for creating, reading, updating, and deleting
