@@ -1,6 +1,11 @@
 log/*
 tmp/*
-public/*
+public/images/*
+public/jacascript/*
+public/stylesheets/*
+public/robots.txt
+public/favicon.ico
 config/database.yml
 vendor/*
 db/*.sqlite3
+doc/*
