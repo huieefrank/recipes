@@ -1,0 +1,16 @@
+<h1><%= @event.name %></h1>
+
+<% for column in Event.content_columns -%>
+<p>
+  <strong><%= column.human_name %>:</strong> 
+  <%=h @event.send(column.name) %>
+</p>
+<% end -%>
+
+<%= button_to "Copy", copy_event_path(@event) %>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Destroy', event_path(@event), 
+                       :confirm => "Are you sure?", 
+                       :method => :delete %> |
+<%= link_to 'Back', events_path %>

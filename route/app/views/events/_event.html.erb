@@ -1,0 +1,18 @@
+<h2><%= link_to event.name, event %></h2>
+
+<p>
+  <%= h truncate(event.description, 250) %>
+</p>
+<br/>
+<table class="event" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <th>When?</th>
+    <td><%= event.starts_at.to_s(:event_time) %></td>
+  </tr>  
+  <tr>
+    <th>Cost?</th>
+    <td><%= number_to_currency(event) %></td>
+  </tr>
+ 
+  
+</table>

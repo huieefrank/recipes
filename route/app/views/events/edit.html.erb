@@ -1,0 +1,15 @@
+<div id="banner">
+  <h1>Editing Event</h1>
+</div>
+
+<%= error_messages_for :event %>
+
+<% form_for(@event) do |f| -%>
+  <fieldset>
+    <%= render :partial => 'form', :object => f %>
+    <p>
+      <%= f.submit 'Update' %> or
+      <%= link_to 'Back', events_path %>
+    </p>
+  </fieldset>
+<% end -%>

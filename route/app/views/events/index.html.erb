@@ -1,0 +1,12 @@
+<% for event in @events -%>
+  <div class="event">
+    <%= render :partial => 'event', :object => event %>
+  </div>
+<% end -%>
+
+<!-- #START:search -->
+<% form_tag search_events_path, :method => :get do -%>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag 'Search Events' %>
+<% end -%>
+<!-- #END:search -->

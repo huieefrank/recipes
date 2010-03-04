@@ -1,0 +1,13 @@
+<div id="banner">
+  <h1>You searched for '<%= h params[:q] %>'...</h1>
+</div>
+
+<h2>
+<%= pluralize @events.size, 'result' %>:
+</h2>
+
+<ul>
+<% for event in @events -%>
+  <li><%= link_to event.name, event %></li>
+<% end -%>
+</ul>

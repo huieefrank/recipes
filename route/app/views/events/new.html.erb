@@ -1,0 +1,17 @@
+<div id="banner">
+  <h1>Create a New Event</h1>
+</div>
+
+<%= error_messages_for :event %>
+
+<!-- #START:start -->
+<% form_for @event do |f| -%>
+<!-- #END:start -->
+  <fieldset>
+    <%= render :partial => 'form', :object => f %>
+    <p>
+      <%= f.submit "Create" %> or 
+      <%= link_to 'Back', events_path %>
+    </p>
+  </fieldset>
+<% end -%>

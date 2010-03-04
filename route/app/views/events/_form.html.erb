@@ -1,0 +1,23 @@
+<p>
+  <%= label(:event, :name, 'Name', :class => 'required') %>
+  <%= text_field 'event', 'name', :size => 30  %>
+</p>
+<p>
+  <%= label(:event, :description, 'Description', :class => 'required') %>
+  <%= text_area 'event', 'description' %>
+</p>
+
+<p>
+  <%= label(:event, :starts_at, 'Time', :class => 'required') %>
+  <%= datetime_select 'event', 'starts_at'  %>
+</p>
+
+<p>
+  <%= label(:event, :capacity, 'Capacity', :class => 'required') %>
+  <%= text_field 'event', 'capacity', :size => 10  %>
+</p>
+<p>
+  <%= label(:event, :price, 'Price', :class => 'required') %>
+  <%= text_field 'event', 'price' %>
+</p>
+

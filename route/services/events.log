@@ -1,0 +1,7 @@
+# Logfile created on Wed Mar 03 17:30:40 +0800 2010 by /
+GET http://localhost:3000/events.xml
+GET http://localhost:3000/events/1.xml
+GET http://localhost:3000/events/1.xml
+--> 200 OK (421 4227ms)
+PUT http://localhost:3000/events/1.xml
+--> 200 OK (1 664ms)
