@@ -1,7 +1,7 @@
 log/*
 tmp/*
 public/images/*
-public/jacascript/*
+public/javascript/*
 public/stylesheets/*
 public/robots.txt
 public/favicon.ico
