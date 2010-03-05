@@ -1,0 +1,25 @@
+<p>
+  <b>Created by:</b>
+  <%=h @erratum.created_by %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%=h @erratum.page %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @erratum.description %>
+</p>
+
+<p>
+  <b>Fixed:</b>
+  <%=h @erratum.fixed %>
+</p>
+
+
+<%= link_to 'Edit', edit_erratum_path(@erratum) %> |
+<%= link_to 'Destroy', @erratum, :confirm => 'Are you sure?', 
+                                 :method => :delete %> |
+<%= link_to 'Back', errata_path %>

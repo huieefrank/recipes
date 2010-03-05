@@ -1,0 +1,36 @@
+<h1>Errata</h1>
+
+<table width="75%">
+  <tr>
+    <th>Page</th>
+    <th>Created by</th>
+    <th>Description</th>
+    <th>&nbsp;</th>
+  </tr>
+<% for erratum in @errata %>
+  <tr>
+    <td>
+      <%= link_to erratum.page, erratum %>
+    </td>
+    <td>
+      <%= h erratum.created_by %>
+    </td>
+    <td>
+      <%= h truncate(erratum.description, 35) %>
+    </td>
+    <td>
+      <strong>Fixed?</strong>
+      <!-- #START:checkbox -->
+      <%= check_box_tag 'erratum[fixed]', "1", erratum.fixed,
+                        :onclick => toggle_value(erratum) %>
+      <%= image_tag 'spinner.gif', :id => "spinner-#{erratum.id}", 
+                                   :style => 'display: none' %>
+      <!-- #END:checkbox -->
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create a New Erratum', new_erratum_path %>

@@ -1,0 +1,26 @@
+<h1>New erratum</h1>
+
+<%= error_messages_for :erratum %>
+
+<% form_for(@erratum) do |f| %>
+  <p>
+    <b>Created by</b><br />
+    <%= f.text_field :created_by %>
+  </p>
+
+  <p>
+    <b>Page</b><br />
+    <%= f.text_field :page %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+  
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', errata_path %>

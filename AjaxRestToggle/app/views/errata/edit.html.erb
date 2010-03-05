@@ -1,0 +1,37 @@
+<h1>Editing erratum</h1>
+
+<%= error_messages_for :erratum %>
+
+<% form_for(@erratum) do |f| %>
+  <p>
+    <b>Created by</b><br />
+    <%= f.text_field :created_by %>
+  </p>
+
+  <p>
+    <b>Page</b><br />
+    <%= f.text_field :page %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <b>Fixed?</b>:
+    <!-- START:checkbox -->
+    <%= f.check_box :fixed,
+                    :onclick => toggle_value(@erratum) %>
+    <%= image_tag 'spinner.gif', :id => "spinner-#{@erratum.id}", 
+                                 :style => 'display: none' %>
+    <!-- END:checkbox -->
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @erratum %> |
+<%= link_to 'Back', errata_path %>
