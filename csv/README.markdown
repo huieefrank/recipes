@@ -1,4 +1,4 @@
- 解决的问题，数据表与csv文件的inport与export
+解决的问题，数据表与csv文件的inport与export
  
 使用：
  $gem install fastercsv
