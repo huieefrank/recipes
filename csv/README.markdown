@@ -1,16 +1,15 @@
-½â¾öµÄÎÊÌâ£¬Êı¾İ±íÓëcsvÎÄ¼şµÄinportÓëexport
+è§£å†³çš„é—®é¢˜ï¼Œæ•°æ®è¡¨ä¸csvæ–‡ä»¶çš„inportä¸export
  
-Ê¹ÓÃ£º
+ä½¿ç”¨ï¼š
  $gem install fastercsv
  
-1 È·¶¨Êı¾İ±í½á¹¹£¬$ruby script/generate scaffold .....
+1 ç¡®å®šæ•°æ®è¡¨ç»“æ„ï¼Œ$ruby script/generate scaffold .....
 
-2 index.htmlÎÄ¼şÖĞ£¬´´½¨ upload_form £¬´´½¨Ò»¸öÃûÎªwether_dataÊµÀı¶ÔÏó£¬ÆäÖĞ
-  wether_data[file_data]¾ÍÊÇÓÃÀ´ÁãÊ±´æ´¢csvÎÄ¼ş¡£
+2 index.htmlæ–‡ä»¶ä¸­ï¼Œåˆ›å»º upload_form ï¼Œåˆ›å»ºä¸€ä¸ªåä¸ºwether_dataå®ä¾‹å¯¹è±¡ï¼Œå…¶ä¸­
+  wether_data[file_data]å°±æ˜¯ç”¨æ¥é›¶æ—¶å­˜å‚¨csvæ–‡ä»¶ã€‚
 
-3 controllerÖĞ¶¨Òåimport£¬¸ù¾İ params[:weather_data][:file_data]´´½¨½âÎöÆ÷¶ÔÏó,
-   ¸ù¾İFieldInfo objectµÄheader£¬À´´¦ÀíÖµµÄ×ª»»Îª±ØÒªµÄ¸ñÊ½¡£
-   ÖğĞĞ´æÈëÊı¾İµ½Êı¾İ±í¡£
+3 controllerä¸­å®šä¹‰importï¼Œæ ¹æ® params[:weather_data][:file_data]åˆ›å»ºè§£æå™¨å¯¹è±¡,
+   æ ¹æ®FieldInfo objectçš„headerï¼Œæ¥å¤„ç†å€¼çš„è½¬æ¢ä¸ºå¿…è¦çš„æ ¼å¼ã€‚
+   é€è¡Œå­˜å…¥æ•°æ®åˆ°æ•°æ®è¡¨ã€‚
    
-4 export¶¨Òå £¬csvÖĞ¼ÓÈëÁĞÃûĞÅÏ¢£»ÌáÈ¡Êı¾İ¿âÖĞµÄÊı¾İ£¬ÖğĞĞ¼ÓÈëcsv£»·¢ËÍÊı¾İµ½ä¯ÀÀÆ÷£¨ÏÂÔØ£©
- 
+4 exportå®šä¹‰ ï¼Œcsvä¸­åŠ å…¥åˆ—åä¿¡æ¯ï¼›æå–æ•°æ®åº“ä¸­çš„æ•°æ®ï¼Œé€è¡ŒåŠ å…¥csvï¼›å‘é€æ•°æ®åˆ°æµè§ˆå™¨ï¼ˆä¸‹è½½ï¼‰
