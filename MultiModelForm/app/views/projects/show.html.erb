@@ -1,0 +1,15 @@
+<% title "Project: #{@project.name}" %>
+
+<h2>Tasks</h2>
+<ul>
+<% for task in @project.tasks %>
+  <li>
+    <%=h task.name %>
+  </li>
+<% end %>
+</ul>
+
+<p>
+  <%= link_to "Edit Project", edit_project_path(@project) %> |
+  <%= link_to 'View all projects', projects_path %>
+</p>
