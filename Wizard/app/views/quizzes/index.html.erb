@@ -1,0 +1,40 @@
+<h1>Quizzes</h1>
+
+<% unless @quizzes.any? -%>
+  <p>
+    You don't have any quizzes. 
+	  Want to <%= link_to 'start one', new_quiz_path %>?
+  </p>
+
+<% else -%>
+
+<table style="width: 75%;">
+  <tr>
+    <th>Player</th>
+    <th>Current Question</th>
+    <th>Last Played</th>
+	  <th>&nbsp;</th>
+  </tr>
+<% for quiz in @quizzes -%>
+  <tr>
+    <td>
+      <strong><%= h quiz.id %></strong>
+    </td>
+    <td>
+      <strong><%= h quiz.state %></strong>
+    </td>
+  	<td>
+  	  <%= time_ago_in_words(quiz.updated_at) %> ago
+  	</td>
+    <td>
+      <%= link_to 'Continue Where You Left Off...', edit_quiz_path(quiz) %>
+    </td>
+  </tr>
+<% end -%>
+</table>
+
+<br />
+
+<%= link_to 'Take the quiz!', new_quiz_path %>
+
+<% end -%>

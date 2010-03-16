@@ -1,0 +1,4 @@
+<label for="answer_value"><%= question.text %></label>
+<%= select :answer, :value, 
+           {"Yes" => "true", "No" => "false"},
+           :selected => answer.value %>

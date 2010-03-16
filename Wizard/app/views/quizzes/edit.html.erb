@@ -1,0 +1,23 @@
+<% form_for(@quiz) do |f| -%>
+  <fieldset>
+    <%= render :partial => question_template(@quiz.current_question),
+               :locals => {
+                 :question => @quiz.current_question,
+                 :answer   => @answer
+               } %>
+  </fieldset>
+  <%= hidden_field_tag :direction, "next" %>
+  <hr/>
+  <table class="controls">
+    <tr>
+      <td>
+        <%= button_to_function "&#8592; Previous",
+              "$('direction').value = 'previous'; this.form.submit();" %>
+      </td>
+      <td>
+        <%= submit_tag "Next &#8594;" %> 
+      </td>
+    </tr>
+  </table>
+<% end -%>
+
